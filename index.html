@@ -4,7 +4,7 @@
     <title>Eros Espínola</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/app.css" />
-    <link rel="stylesheet" href="./style/header.css" />
+    <link rel="stylesheet" href="./style/social.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -15,41 +15,56 @@
     />
   </head>
   <body>
-    <div class="container">
-      <header class="header">
-        <img
-          src="https://avatars0.githubusercontent.com/u/4210434?s=400&u=ec2fb173f3e4dda73a08a927cdef546645f07028&v=4"
-        />
-        <h1>Hello, I'm Eros.</h1>
-        <div class="info">
-          <div class="left"><span></span></div>
-          <div class="center">
-            <p>
-              <b>Work in progress 👷.</b> Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Vestibulum ultrices elit massa, nec
-              viverra ligula dapibus ac. Aenean sollicitudin tristique elit at
-              euismod. In accumsan ac magna id scelerisque. Curabitur ultricies
-              vel purus ac iaculis. Integer in ex sit amet sapien tempus porta
-              at varius nisi. Integer a metus arcu. Sed elementum eget nisl eu
-              posuere. Pellentesque sed mauris in tellus vulputate suscipit.
-            </p>
-          </div>
-          <div class="right">
-            <div class="social">
-              <a target="_blank" href="https://github.com/erosespinola">
-                <i class="fa fa-3x fa-github-square" aria-hidden="true"></i>
-              </a>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/erosespinola/"
-              >
-                <i class="fa fa-3x fa-linkedin-square" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-      <div class="border" />
+    <div class="social">
+      <a>
+        <i class="fa fa-1x fa-chevron-left" aria-hidden="true"></i>
+      </a>
+      <a target="_blank" href="https://github.com/erosespinola">
+        <i class="fa fa-3x fa-github-square" aria-hidden="true"></i>
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/in/erosespinola/">
+        <i class="fa fa-3x fa-linkedin-square" aria-hidden="true"></i>
+      </a>
     </div>
+    <div class="container">
+      <img
+        class="avatar"
+        src="https://avatars0.githubusercontent.com/u/4210434?s=400&u=ec2fb173f3e4dda73a08a927cdef546645f07028&v=4"
+      />
+      <div class="row">
+        <h2>Hello, I'm Eros.</h2>
+        <p>
+          I am a full stack engineer specializing in JavaScript, React, and
+          Node.js. I am originally from Mexico but currently living and working
+          in New York City. Career wise I am interested in web development,
+          beautiful/simple interfaces, and leading teams to victory. I am
+          looking to expand my knowledge in cloud services, good practices and
+          vanilla JavaScript. Outside of work you can find me eating tacos 🌮,
+          taking photos 📷, watching YouTube cooking shows 👨🏽‍🍳, and brewing and
+          drinking specialty coffee ☕️.
+          <strike
+            >If it takes less than 5 minutes to brew and prep... it ain’t
+            special.</strike
+          >
+        </p>
+      </div>
+      <div class="border"></div>
+      <div class="row">
+        <h3>Just for fun</h3>
+        <p>
+          This is some of the stuff that I have created on my free time with
+          vanilla JavaScript + HTML + CSS... and something coffee.
+        </p>
+      </div>
+      <div class="border"></div>
+    </div>
+    <script>
+      const social = document.querySelector('.social');
+      function toggleSocial() {
+        this.classList.toggle('active');
+      }
+
+      social.addEventListener('click', toggleSocial);
+    </script>
   </body>
 </html>
