@@ -3,8 +3,10 @@
     <meta charset="UTF-8" />
     <title>Eros Espínola</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/app.css" />
-    <link rel="stylesheet" href="./style/social.css" />
+    <script src="./scripts/catify.js"></script>
+    <link rel="stylesheet" href="./styles/app.css" />
+    <link rel="stylesheet" href="./styles/social.css" />
+    <link rel="stylesheet" href="./styles/demos.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -51,19 +53,65 @@
       </div>
       <div class="border"></div>
       <div class="row">
-        <h3>Just for fun</h3>
+        <h2>Just for fun</h2>
         <p>
           This is some of the stuff that I have created on my free time with
           vanilla JavaScript + HTML + CSS... and something coffee.
         </p>
       </div>
+      <div class="demo">
+        <div class="demo__row">
+          <img src="./images/video.png" />
+        </div>
+        <div class="demo__row">
+          <h3>
+            Emoji Video Player
+          </h3>
+          <div class="border"></div>
+          <p>
+            A basic but interesting video player that showcases video handling
+            with JavaScript.
+          </p>
+          <a class="demo__button" href="./demos/video/index.html"
+            ><i class="fa fa-link" aria-hidden="true"></i>Visit</a
+          >
+        </div>
+      </div>
     </div>
     <script>
+      const code = [
+        'arrowup',
+        'arrowup',
+        'arrowdown',
+        'arrowdown',
+        'arrowleft',
+        'arrowright',
+        'arrowleft',
+        'arrowright',
+        'a',
+        'b',
+      ];
+
+      const typedCode = [];
       const social = document.querySelector('.social');
+
       function toggleSocial() {
         this.classList.toggle('active');
       }
 
+      function checkForCode(evt) {
+        typedCode.push(evt.key.toLowerCase());
+
+        if (typedCode.length > code.length) {
+          typedCode.shift();
+        }
+
+        if (typedCode.join('') === code.join('')) {
+          catify();
+        }
+      }
+
+      window.addEventListener('keydown', checkForCode);
       social.addEventListener('click', toggleSocial);
     </script>
   </body>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML Video Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="player">
+      <video class="player__video viewer" src="652333414.mp4"></video>
+
+      <div class="player__controls">
+        <div class="progress">
+          <div class="progress__filled"></div>
+        </div>
+        <button class="player__button toggle" title="Toggle Play">▶️</button>
+        <button class="player__button volume" title="Volume">🔊</button>
+        <input
+          type="range"
+          title="Volume"
+          class="player__slider"
+          min="0"
+          max="1"
+          step="0.05"
+          value="1"
+        />
+        <button data-speed="0.5" title="Playback" class="player__button">
+          0.5
+        </button>
+        <button data-speed="1.0" title="Playback" class="player__button active">
+          1.0
+        </button>
+        <button data-speed="2.0" title="Playback" class="player__button">
+          2.0
+        </button>
+
+        <button data-skip="-10" title="Skip" class="player__button">⏪</button>
+        <button data-skip="10" title="Skip" class="player__button">⏩</button>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
