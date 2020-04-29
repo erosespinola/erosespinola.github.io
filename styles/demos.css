@@ -47,7 +47,9 @@
   margin: 0 0.2rem;
 }
 
-.demo__button:visited {
+.demo__button,
+.demo__button:visited,
+.demo__button:active {
   color: var(--font-color);
 }
 
