@@ -1,0 +1,104 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  background: #efefef;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+
+  margin: 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+button {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: solid 1px #d5e0e7;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  height: 50px;
+  width: 200px;
+  min-width: 150px;
+}
+
+button:hover {
+  border: solid 1px #b0c5d2;
+  box-shadow: 0 1px 0 #b0c5d2;
+}
+
+button:first-of-type {
+  margin-right: 10px;
+}
+
+.photo {
+  width: 100%;
+  float: left;
+  margin: 20px 0 20px 0;
+}
+
+.player {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.strip {
+  top: 90px;
+  left: 20px;
+  position: absolute;
+}
+
+@media (max-width: 900px) {
+  .player {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+  }
+}
+
+.strip img {
+  width: 100px;
+  padding: 5px 5px 20px 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+
+.strip a:nth-child(5n + 1) img {
+  transform: rotate(10deg);
+}
+.strip a:nth-child(5n + 2) img {
+  transform: rotate(-2deg);
+}
+.strip a:nth-child(5n + 3) img {
+  transform: rotate(8deg);
+}
+.strip a:nth-child(5n + 4) img {
+  transform: rotate(-11deg);
+}
+.strip a:nth-child(5n + 5) img {
+  transform: rotate(12deg);
+}
+
+.strip a img:hover {
+  box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.35);
+  transform: scale(1.1);
+}
